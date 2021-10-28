@@ -64,8 +64,8 @@ func (p *Peers) SmallestAvailableShardID() (string, error) {
 
 func WatchPeersNoJoin(zkWatcher *zk.Watcher) *Peers {
 	p := &Peers{
-		peers: make(map[peer]bool),
-		ring:  consistent.New(),
+		peers:                 make(map[peer]bool),
+		ring:                  consistent.New(),
 		resetConvergenceTimer: make(chan bool),
 	}
 
@@ -77,10 +77,10 @@ func WatchPeersNoJoin(zkWatcher *zk.Watcher) *Peers {
 
 func WatchPeers(zkWatcher *zk.Watcher, shardID, address string) *Peers {
 	p := &Peers{
-		ShardID: shardID,
-		address: address,
-		peers:   make(map[peer]bool),
-		ring:    consistent.New(),
+		ShardID:               shardID,
+		address:               address,
+		peers:                 make(map[peer]bool),
+		ring:                  consistent.New(),
 		resetConvergenceTimer: make(chan bool),
 	}
 

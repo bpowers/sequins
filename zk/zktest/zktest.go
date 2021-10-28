@@ -6,13 +6,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/samuel/go-zookeeper/zk"
+	"github.com/go-zookeeper/zk"
 	"github.com/stretchr/testify/require"
 )
 
 // New returns a new TestCluster rooted at a temporary dir.
 func New(t *testing.T) *zk.TestCluster {
-	tzk, err := zk.StartTestCluster(1, nil, nil)
+	tzk, err := zk.StartTestCluster(t,1, nil, nil)
 	require.NoError(t, err, "zk setup")
 	return tzk
 }

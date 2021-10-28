@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -510,5 +511,5 @@ func (s *sequins) checkFlag(prefix string) (bool, string) {
 		name = name + "." + cluster
 	}
 
-	return goforit.Enabled(nil, name), name
+	return goforit.Enabled(context.Background(), name, nil), name
 }

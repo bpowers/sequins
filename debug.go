@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/DataDog/datadog-go/statsd"
-	"github.com/codahale/hdrhistogram"
+	"github.com/HdrHistogram/hdrhistogram-go"
 )
 
 const requestLogEnableFlagPrefix = "sequins.request_log"

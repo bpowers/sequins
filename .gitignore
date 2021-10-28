@@ -10,3 +10,5 @@ testdata
 test_scratch
 status.tmpl.go
 sequins.conf
+/zookeeper
+/apache-zookeeper*
