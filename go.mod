@@ -10,12 +10,12 @@ require (
 	github.com/bsm/go-sparkey v0.0.0-20160321124439-66bee8aff699
 	github.com/colinmarc/hdfs v1.1.3
 	github.com/colinmarc/sequencefile v0.0.0-20180131201206-9002e8e448bd
+	github.com/go-zookeeper/zk v1.0.2
 	github.com/golang/snappy v0.0.4
 	github.com/juju/ratelimit v1.0.1
 	github.com/ncw/directio v1.0.5
 	github.com/nightlyone/lockfile v1.0.0
 	github.com/pborman/uuid v1.2.1
-	github.com/samuel/go-zookeeper v0.0.0-20201211165307-7117e9ea2414
 	github.com/stretchr/testify v1.7.0
 	github.com/stripe/goforit v0.0.0-20210928202923-4690a0f80a54
 	github.com/tylerb/graceful v1.2.15
