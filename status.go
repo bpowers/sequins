@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "embed"
 	"encoding/json"
 	"fmt"
 	"html/template"
@@ -57,10 +58,13 @@ var templateFns = template.FuncMap{
 	},
 }
 
+//go:embed status.tmpl
+var statusTmpl []byte
+
 func init() {
 	// This is chunked into the binary with go-bindata. See the Makefile for more
 	// information.
-	raw := string(MustAsset("status.tmpl"))
+	raw := string(statusTmpl)
 	statusTemplate = template.Must(template.New("status").Funcs(templateFns).Parse(raw))
 }
 
